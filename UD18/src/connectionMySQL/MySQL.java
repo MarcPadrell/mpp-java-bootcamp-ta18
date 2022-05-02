@@ -95,6 +95,50 @@ public class MySQL {
 			}
 
 		}
+		
+		// METODO QUE OBTIENE VALORES MYSQL EX 01
+		public static void getValues_ex01(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("Codigo: " + resultSet.getString("Codigo") + " " + "Nombre: "
+							+ resultSet.getString("Nombre") + " " + "Precio:" + resultSet.getString("Precio")
+							+ " " + "Fabricante: " + resultSet.getString("Fabricante"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 01
+		public static void deleteRecord_ex01(String db, String table_name, int Codigo) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE Codigo = \"" + Codigo + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
 
 		// METODO QUE OBTIENE VALORES MYSQL EX 02
 		public static void getValues_ex02(String db, String table_name) {
@@ -183,6 +227,179 @@ public class MySQL {
 			}
 		}
 		
+		// METODO QUE OBTIENE VALORES MYSQL ES 04
+		public static void getValues_ex04(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("Codigo: " + resultSet.getString("Codigo") + " " + "Nombre: "
+							+ resultSet.getString("Nombre") + " " + "CalificacionEdad:" + resultSet.getString("CalificacionEdad"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 04
+		public static void deleteRecord_ex04(String db, String table_name, int codigo) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE Codigo = \"" + codigo + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
+		
+		// METODO QUE OBTIENE VALORES MYSQL EX 05
+		public static void getValues_ex05(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("DNI: " + resultSet.getString("DNI") + " " + "NomApels: "
+							+ resultSet.getString("NomApels") + " " + "DNIJefe: " + resultSet.getString("DNIJefe")
+							+ " " + "Despacho: " + resultSet.getString("Despacho"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 05
+		public static void deleteRecord_ex05(String db, String table_name, int Despacho) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE Despacho = \"" + Despacho + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
+		
+		// METODO QUE OBTIENE VALORES MYSQL EX 06
+		public static void getValues_ex06(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("Codigo pieza: " + resultSet.getString("Codigo") + " " + "Nombre: "
+							+ resultSet.getString("Nombre"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 06
+		public static void deleteRecord_ex06(String db, String table_name, int codigo) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE Codigo = \"" + codigo + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
+		
+		// METODO QUE OBTIENE VALORES MYSQL EX 07
+		public static void getValues_ex07(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("Cientifico: " + resultSet.getString("Cientifico") + " " + "Proyecto: "
+							+ resultSet.getString("Proyecto"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 07
+		public static void deleteRecord_ex07(String db, String table_name, int Proyecto) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE Proyecto = \"" + Proyecto + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
+		
 		// METODO QUE OBTIENE VALORES MYSQL EX 08
 		public static void getValues_ex08(String db, String table_name) {
 			try {
@@ -215,6 +432,49 @@ public class MySQL {
 				stdb.executeUpdate(Querydb);
 
 				String Query = "DELETE FROM " + table_name + " WHERE cajero = \"" + cajero + "\"";
+				Statement st = conexion.createStatement();
+				st.executeUpdate(Query);
+
+				System.out.println("Registros de tabla ELIMINADOS con exito!");
+
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				JOptionPane.showMessageDialog(null, "Error borrando el registro especificado");
+			}
+		}
+		
+		// METODO QUE OBTIENE VALORES MYSQL EX 09
+		public static void getValues_ex09(String db, String table_name) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "SELECT * FROM " + table_name;
+				Statement st = conexion.createStatement();
+				java.sql.ResultSet resultSet;
+				resultSet = st.executeQuery(Query);
+
+				while (resultSet.next()) {
+					System.out.println("");
+					System.out.println("DNI Investigador: " + resultSet.getString("DNI") + " " + "Nombre: "
+							+ resultSet.getString("NomApels") + " Facultad: " + resultSet.getInt("Facultad"));
+				}
+			} catch (SQLException ex) {
+				System.out.println(ex.getMessage());
+				System.out.println("Error en la adquisicion de datos");
+			}
+
+		}
+
+		// METODO QUE LIMPIA TABLAS MYSQL EX 09
+		public static void deleteRecord_ex09(String db, String table_name, String dni) {
+			try {
+				String Querydb = "USE " + db + ";";
+				Statement stdb = conexion.createStatement();
+				stdb.executeUpdate(Querydb);
+
+				String Query = "DELETE FROM " + table_name + " WHERE DNI = \"" + dni + "\"";
 				Statement st = conexion.createStatement();
 				st.executeUpdate(Query);
 

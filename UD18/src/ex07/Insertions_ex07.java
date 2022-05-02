@@ -15,7 +15,7 @@ public class Insertions_ex07 {
 	
 	public static String tablaProyecto = "(Id char(4),"
 			+ "Nombre varchar(255) DEFAULT NULL,"
-			+ "Horas int unsigned DEFAULT NULL,"
+			+ "Horas int DEFAULT NULL,"
 			+ "PRIMARY KEY (Id));";
 				
 	public static String insercionCientificos = "(DNI, NomApels) values "

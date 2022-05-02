@@ -8,7 +8,7 @@ public class MainApp_ex01 {
 
 		MySQL.openConnection();
 
-		MySQL.createDB("La_Tienda_Informatica");
+		//MySQL.createDB("La_Tienda_Informatica");
 
 		// MySQL.deleteTabla("La_Tienda_Informatica", "Fabricantes");
 		// MySQL.deleteTabla("La_Tienda_Informatica", "Articulos");
